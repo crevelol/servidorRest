@@ -60,9 +60,9 @@ app.post("/registro", function(req, res) {
     //Mes
     let m = n.getMonth() + 1;
     //Día
-    let d = n.getDate();
+    let d = n.getDate() - 1;
     //Hora
-    let ho = n.getHours();
+    let ho = n.getHours() + 19;
     //Minutos
     let mi = n.getMinutes();
     //Segundos
