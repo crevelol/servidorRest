@@ -4,19 +4,19 @@ const _ = require('underscore');
 
 const app = express();
 
-let n = new Date();
+var n = new Date();
 //Año
-let y = n.getFullYear();
+var y = n.getFullYear();
 //Mes
-let m = n.getMonth() + 1;
+var m = n.getMonth() + 1;
 //Día
-let d = n.getDate();
+var d = n.getDate();
 //Hora
-let ho = n.getHours();
+var ho = n.getHours();
 //Minutos
-let mi = n.getMinutes();
+var mi = n.getMinutes();
 //Segundos
-let se = n.getSeconds();
+var se = n.getSeconds();
 
 app.get("/registro/fecha/:desde/:hasta", function(req, res) {
 
@@ -65,8 +65,8 @@ app.get("/registro/caja/:caja", function(req, res) {
         });
 });
 
-fech = y + "-" + m + "-" + d
-hor = ho + ":" + mi + ":" + se
+var fech = y + "-" + m + "-" + d
+var hor = ho + ":" + mi + ":" + se
 
 app.post("/registro", function(req, res) {
     let body = req.body;
