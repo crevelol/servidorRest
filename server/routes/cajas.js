@@ -4,20 +4,6 @@ const _ = require('underscore');
 
 const app = express();
 
-var n = new Date();
-//Año
-var y = n.getFullYear();
-//Mes
-var m = n.getMonth() + 1;
-//Día
-var d = n.getDate();
-//Hora
-var ho = n.getHours();
-//Minutos
-var mi = n.getMinutes();
-//Segundos
-var se = n.getSeconds();
-
 app.get("/registro/fecha/:desde/:hasta", function(req, res) {
 
     let fecha1 = req.params.desde;
@@ -65,11 +51,25 @@ app.get("/registro/caja/:caja", function(req, res) {
         });
 });
 
-var fech = y + "-" + m + "-" + d
-var hor = ho + ":" + mi + ":" + se
-
 app.post("/registro", function(req, res) {
     let body = req.body;
+
+    let n = new Date();
+    //Año
+    let y = n.getFullYear();
+    //Mes
+    let m = n.getMonth() + 1;
+    //Día
+    let d = n.getDate();
+    //Hora
+    let ho = n.getHours();
+    //Minutos
+    let mi = n.getMinutes();
+    //Segundos
+    let se = n.getSeconds();
+
+    var fech = y + "-" + m + "-" + d
+    var hor = ho + ":" + mi + ":" + se
 
     let caja = new Caja({
         n_caja: body.n_caja,
