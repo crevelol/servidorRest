@@ -1,5 +1,5 @@
 const express = require("express");
-const Caja = require("../models/usuario");
+const Caja = require("../models/cajas");
 const _ = require('underscore');
 
 const app = express();
