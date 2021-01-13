@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(require("./server/routes/cajas"));
 
 mongoose.connect(
-    "mongodb://localhost:27017/cocoa", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
+    process.env.URLDB, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
 
     (err, res) => {
         if (err) throw err;
