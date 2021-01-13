@@ -32,7 +32,7 @@ app.get("/registro/caja/:caja", function(req, res) {
 
     let caja = req.params.caja;
 
-    Caja.find({}, 'n_caja fecha hora')
+    Caja.find({ n_caja: caja }, 'n_caja fecha hora')
         .exec((err, registro) => {
             if (err) {
                 return res.status(400).json({
