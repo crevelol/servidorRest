@@ -60,7 +60,7 @@ app.post("/registro", function(req, res) {
     //Mes
     let m = n.getMonth() + 1;
     //Día
-    let d = n.getDate() - 1;
+    let d = n.getDate();
     //Hora
     //Este ajuste de UTC esa para que este alinea con nuestra hora local
     let ho = n.getUTCHours();
