@@ -8,18 +8,28 @@ Es un servidor REST que permite hacer consultas a cajas por ejemplo de un banco 
 Se puede ejecutar con:
 #### node server.js
 
+Se tiene que realizar un login antes con la siguiente consulta que te brindara un token para cada peticion
+
+https://rest-server-revelo.herokuapp.com/login
+
+Este es un usuario admin que podra realizar todas las consultas sin problema.
+Body
+#### KEY	     VALUE
+#### email 	 c@mail.com
+#### password 12345678
 
 ### Pre-requisitos 📋
 
-Se debe instalar los siguientes modulos con npm install (modulo) --save
--express
--mongoose
--body-parser
--http
--path
--underscore
--jsonwebtoken
--bcrypt
+Se debe instalar los siguientes modulos con:
+#### npm install (modulo) --save
+- express
+- mongoose
+- body-parser
+- http
+- path
+- underscore
+- jsonwebtoken
+- bcrypt
 
 ### Instalación 🔧
 
@@ -32,7 +42,7 @@ Formato
 https://rest-server-revelo.herokuapp.com/registro
 
 Body
-KEY	VALUE
+KEY	    VALUE
 n_caja	(Valor a ingresar)
 En el caso de VALUE solo se podra ingresar un numero del 1 al 3 ya que solo existen 3 cajas de atencion
 
