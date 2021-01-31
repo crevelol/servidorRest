@@ -2,9 +2,11 @@ const express = require("express");
 const Caja = require("../models/cajas");
 const _ = require('underscore');
 
+const { verificaToken, verificaAdminRole } = require('../middlewares/autenticación')
+
 const app = express();
 
-app.get("/registro/fecha/:desde/:hasta", function(req, res) {
+app.get("/registro/fecha/:desde/:hasta", verificaToken, function(req, res) {
 
     let fecha1 = req.params.desde;
     let fecha2 = req.params.hasta;
@@ -28,7 +30,7 @@ app.get("/registro/fecha/:desde/:hasta", function(req, res) {
         });
 });
 
-app.get("/registro/caja/:caja", function(req, res) {
+app.get("/registro/caja/:caja", verificaToken, function(req, res) {
 
     let caja = req.params.caja;
 
@@ -51,7 +53,7 @@ app.get("/registro/caja/:caja", function(req, res) {
         });
 });
 
-app.post("/registro", function(req, res) {
+app.post("/registro", [verificaToken, verificaAdminRole], function(req, res) {
     let body = req.body;
 
     let n = new Date();
@@ -94,7 +96,7 @@ app.post("/registro", function(req, res) {
 
 });
 
-app.delete("/registro/:id", function(req, res) {
+app.delete("/registro/:id", [verificaToken, verificaAdminRole], function(req, res) {
     let id = req.params.id;
 
     Caja.findByIdAndDelete(id, (err, registroEliminado) => {

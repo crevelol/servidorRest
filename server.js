@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(require("./server/routes/cajas"));
+app.use(require("./server/routes/index"));
 
 mongoose.connect(
     process.env.URLDB, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
