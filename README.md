@@ -26,7 +26,7 @@ Se debe descargar los prerrequisitos y ya esta listo para produccion.
 
 
 ## Ejecutando las pruebas ⚙️
-#POST
+# POST
 Formato
 https://rest-server-revelo.herokuapp.com/registro
 
@@ -35,7 +35,7 @@ KEY	VALUE
 n_caja	(Valor a ingresar)
 En el caso de VALUE solo se podra ingresar un numero del 1 al 3 ya que solo existen 3 cajas de atencion
 
-#GET
+# GET
 Realiza una consulta de todas las cajas que tengas el numero que se pide en la consulta
 
 Numero de caja: Se ingresa como parametro en nuestra ULR
@@ -53,7 +53,7 @@ https://rest-server-revelo.herokuapp.com/registro/fecha/(Desde cuando)/(Hasta cu
 
 El formato de la fecha ingresada debe ser en yyyy-mm-dd
 
-#DELETE
+# DELETE
 
 Eliminamos cualquier dato por medio del siguiente parametro :
 
