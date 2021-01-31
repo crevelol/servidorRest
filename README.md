@@ -15,8 +15,8 @@ https://rest-server-revelo.herokuapp.com/login
 Este es un usuario admin que podra realizar todas las consultas sin problema.
 Body
 #### {
-#### email: 	 c@mail.com
-#### password: 12345678
+#### "email": 	 "c@mail.com"
+#### "password": "12345678"
 #### }
 
 
