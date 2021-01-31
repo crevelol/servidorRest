@@ -5,7 +5,8 @@ Es un servidor REST que permite hacer consultas a cajas por ejemplo de un banco 
 
 ## Comenzando 🚀
 
-Se puede ejecutar con #node server.js
+Se puede ejecutar con:
+#### node server.js
 
 
 ### Pre-requisitos 📋
